@@ -1,4 +1,4 @@
-namespace App {
+// namespace App {
     //Validator
     export interface validatable {
         value: string | number;
@@ -28,4 +28,4 @@ namespace App {
         }
         return isValid;
     }
-}
+// }

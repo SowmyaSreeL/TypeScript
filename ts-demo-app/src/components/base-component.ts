@@ -1,12 +1,11 @@
 //Generic Component class
-namespace App {
+// namespace App {
     export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
         templateEle: HTMLTemplateElement;
         hostEle: T;
         element: U
     
         constructor(templateId: string, hostId: string, insertAtBeginning: boolean, newEleId: string) {
-            console.log(templateId,hostId)
             this.templateEle = document.querySelector(templateId)! as HTMLTemplateElement;
             this.hostEle = document.querySelector(hostId)! as T;
             const nodeToBeImported = document.importNode(this.templateEle.content, true);
@@ -24,4 +23,4 @@ namespace App {
         abstract configure():void;
         abstract renderContent(): void;
     }
-}
+// }
