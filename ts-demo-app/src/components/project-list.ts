@@ -2,12 +2,12 @@
 // <reference path="../decorators/autobind.ts" />
 // <reference path="../models/drag-drop.ts" />
 
-import { DragTarget } from '../models/drag-drop.js';
-import {Component} from './base-component.js';
-import { Project, ProjectStatus } from '../models/project.js';
-import { autobind } from '../decorators/autobind.js';
-import { projectState } from '../state/project.js';
-import { ProjectItem } from './project-item.js';
+import { DragTarget } from '../models/drag-drop';
+import {Component} from './base-component';
+import { Project, ProjectStatus } from '../models/project';
+import { autobind } from '../decorators/autobind';
+import { projectState } from '../state/project';
+import { ProjectItem } from './project-item';
 export class projectList extends Component<HTMLDivElement, HTMLElement> implements DragTarget {
     assignedProjects: Project[]
     constructor(private type: 'active' | 'finished') {
